@@ -10,5 +10,5 @@ Amazon.com.
 - 211031735	- Isaac Lucas Souza Bezerra
 - 211030729	- Eric Rabelo Borges
 
-SelectionSort. Grupo: C
+SelectionSort - Grupo C.
 
