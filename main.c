@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>stdlib
+#include <string.h>
 #include <stdlib.h>
 
 void remover(char *str)
