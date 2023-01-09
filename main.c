@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
 void remover(char *str)
 {
@@ -87,10 +88,21 @@ int main(int argc, char **argv)
         vendas[min] = tmp;
     }
 
+    //inicio da contagem
+    clock_t start_time = clock();
+
     for (int i = tamLinhas - 1; i >= 0; i--)
     {
         printf("%s %.2lf\n", vendas[i].categoria, vendas[i].valor);
     }
     fclose(fp);
+
+    //final da contagem
+    clock_t end_time = clock();
+    //calculo do tempo                                      
+    double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC; 
+    printf("Tempo de processamento: %.2f segundos", elapsed_time);
+
     return 0;
 }
+
