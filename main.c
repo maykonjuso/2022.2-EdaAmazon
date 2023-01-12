@@ -14,7 +14,9 @@ void remover(char *str)
 
 int contarLinhas(char *nome)
 {
+    
     FILE *fp = fopen(nome, "r");
+  
     if (fp == NULL)
     {
         printf("Não foi possível abrir o arquivo\n");
@@ -45,7 +47,9 @@ int main(int argc, char **argv)
     int tamLinhas = contarLinhas("DADOS.csv");
     // Abrir o arquivo .csv
 
-    FILE *fp = fopen("DADOS.csv", "r");
+    FILE *fp, *fsaida;
+    fp = fopen("DADOS.csv", "r");
+    fsaida = fopen("DADOS_SAIDA.csv", "w");
 
     if (fp == NULL)
     {
@@ -93,9 +97,15 @@ int main(int argc, char **argv)
 
     for (int i = tamLinhas - 1; i >= 0; i--)
     {
-        printf("%s %.2lf\n", vendas[i].categoria, vendas[i].valor);
+      //gera e preenche o arquivo de saída
+      fprintf(fsaida,"%s %.2lf\n", vendas[i].categoria, vendas[i].valor);
+      
+      //printa no console - temporário 
+      printf("%s %.2lf\n", vendas[i].categoria, vendas[i].valor);
     }
+    
     fclose(fp);
+    fclose(fsaida);
 
     //final da contagem
     clock_t end_time = clock();
