@@ -14,9 +14,9 @@ void remover(char *str)
 
 int contarLinhas(char *nome)
 {
-    
+
     FILE *fp = fopen(nome, "r");
-  
+
     if (fp == NULL)
     {
         printf("Não foi possível abrir o arquivo\n");
@@ -64,10 +64,10 @@ int main(int argc, char **argv)
 
     while (fgets(linha, sizeof(linha), fp))
     {
-        char *categoria = strtok(linha, ";");
-        char *valor_str = strtok(NULL, ";");
+        char *valor_str = strtok(linha, ";");
+        char *categoria = strtok(NULL, ";");
         // Divide a linha em tokens usando ";" como delimitador
-        remover(valor_str);
+        remover(categoria);
 
         strcpy(vendas[tam].categoria, categoria);
 
@@ -76,13 +76,13 @@ int main(int argc, char **argv)
         tam++;
     }
 
-    //SelectionSort
+    // SelectionSort
     for (int i = 0; i < tamLinhas - 1; i++)
     {
         int min = i;
         for (int j = i + 1; j < tamLinhas; j++)
         {
-            if ((strcmp(vendas[j].categoria, vendas[min].categoria) < 0) || (strcmp(vendas[j].categoria, vendas[min].categoria) == 0 && vendas[j].valor < vendas[min].valor))
+            if (vendas[j].valor < vendas[min].valor)
             {
                 min = j;
             }
@@ -92,27 +92,26 @@ int main(int argc, char **argv)
         vendas[min] = tmp;
     }
 
-    //inicio da contagem
+    // inicio da contagem
     clock_t start_time = clock();
 
     for (int i = tamLinhas - 1; i >= 0; i--)
     {
-      //gera e preenche o arquivo de saída
-      fprintf(fsaida,"%s %.2lf\n", vendas[i].categoria, vendas[i].valor);
-      
-      //printa no console - temporário 
-      printf("%s %.2lf\n", vendas[i].categoria, vendas[i].valor);
+        // gera e preenche o arquivo de saída
+        fprintf(fsaida, "%.2lf %s\n", vendas[i].valor, vendas[i].categoria);
+
+        // printa no console - temporário
+        printf("%.2lf %s\n", vendas[i].valor, vendas[i].categoria);
     }
-    
+
     fclose(fp);
     fclose(fsaida);
 
-    //final da contagem
+    // final da contagem
     clock_t end_time = clock();
-    //calculo do tempo                                      
-    double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC; 
+    // calculo do tempo
+    double elapsed_time = (double)(end_time - start_time) / CLOCKS_PER_SEC;
     printf("Tempo de processamento: %.2f segundos", elapsed_time);
 
     return 0;
 }
-
