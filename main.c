@@ -40,16 +40,17 @@ int main(int argc, char **argv)
 {
     typedef struct
     {
-        char categoria[100];
+        char categoria[50];
         double valor;
     } venda;
 
-    int tamLinhas = contarLinhas("DADOS.csv");
+    int tamLinhas = contarLinhas("dadosAmostra.csv");
+
     // Abrir o arquivo .csv
 
     FILE *fp, *fsaida;
-    fp = fopen("DADOS.csv", "r");
-    fsaida = fopen("DADOS_SAIDA.csv", "w");
+    fp = fopen("dadosAmostra.csv", "r");
+    fsaida = fopen("dadosSaidaAmostra.csv", "w");
 
     if (fp == NULL)
     {
