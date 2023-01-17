@@ -46,6 +46,9 @@ int contarLinhas(char *nome)
 
 int main()
 {
+    // Inicia o contador
+    clock_t start_time = clock();
+
     // Declara uma struct com duas linhas (valor e categoria)
     typedef struct
     {
@@ -54,12 +57,12 @@ int main()
     } VENDA;
 
     // Chama a função contarLinhas para salvar a quantidade de linhas do arquivo na variável tamLinhas
-    int tamLinhas = contarLinhas("dados.csv");
+    int tamLinhas = contarLinhas("dadosAmostra.csv");
 
     // Abertura dos arquivos
     FILE *fp, *fsaida;
-    fp = fopen("dados.csv", "r");
-    fsaida = fopen("dadosSaida.csv", "w");
+    fp = fopen("dadosAmostra.csv", "r");
+    fsaida = fopen("dadosSaidaAmostra.csv", "w");
 
     if (fp == NULL)
     {
@@ -116,16 +119,13 @@ int main()
         vendas[min] = tmp;
     }
 
-    // inicia uma contagem
-    clock_t start_time = clock();
-
     for (int i = tamLinhas - 1; i >= 0; i--)
     {
         // Preenche o arquivo de saída com o vetor ordenado
         fprintf(fsaida, "%.2lf %s\n", vendas[i].valor, vendas[i].categoria);
 
         // Printa no console - temporário (comentado para não alterar o tempo de processamento)
-        // printf("%.2lf %s\n", vendas[i].valor, vendas[i].categoria);
+        printf("%.2lf %s\n", vendas[i].valor, vendas[i].categoria);
     }
 
     // Encerra arquivos e desaloca a memória alocada em malloc
