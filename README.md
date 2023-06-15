@@ -48,9 +48,7 @@ $ cd 2022.2-EdaAmazon
 
 ## Equipe
 
-<a href="#">
+<a align="center">
     <img src="https://avatars.githubusercontent.com/u/89596623?v=4" width="100px;" alt="Foto Maykon"/><br>
-    <sub>
-        <b>Maykon Júnio</b>
-    </sub>
+        <b align="center">Maykon Júnio</b>
 </a>
