@@ -23,7 +23,7 @@ Projeto com o objetivo de ordenar a dados relacionados à precificação da Amaz
 
 ## Introdução
 
-//
+Este projeto tem como objetivo principal a organização e ordenação de dados relacionados à precificação de produtos na Amazon. Através da aplicação de técnicas avançadas de estruturação de dados, busca-se testar e aprimorar conhecimentos nessa área, com o intuito de obter resultados precisos e confiáveis. Com a crescente importância da análise de dados para o sucesso de empresas e organizações, o desenvolvimento de habilidades nessa área torna-se cada vez mais essencial. Nesse sentido, este projeto representa uma oportunidade para aprimorar habilidades em estruturação de dados e aplicá-las em um contexto real, contribuindo para o desenvolvimento profissional e acadêmico dos envolvidos.
 
 ## Tecnologias utilizadas
 
