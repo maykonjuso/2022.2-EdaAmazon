@@ -1,11 +1,21 @@
 <h1>EDA Amazon</h1>
 
-![UnB](https://github.com/maykonjuso/2022.1-Amicis/assets/89596623/0a192c70-9631-451b-a4ef-eadb2bb892e7)
+<p align="center">
+    <img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUDED&color=GREEN&style=for-the-badge"/>
+</p>
 
 <p><br></p>
 
-<h3><b>Disciplina:</b> Estrutura de dados 1</h3>
-<h3><b>Semestre:</b> 2022.2</h3>
+<p align="center">
+    <a href="https://www.unb.br/"><img src="https://github.com/maykonjuso/2022.1-Amicis/assets/89596623/0a192c70-9631-451b-a4ef-eadb2bb892e7"></a>
+</p>
+
+<p><br></p>
+
+<p align="center">
+    <h3 align="center"><b>Disciplina:</b> Estrutura de dados 01</h3>
+    <h3 align="center"><b>Semestre:</b> 2022.2</h3>
+</p>
 
 <p><br></p>
 
